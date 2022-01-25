@@ -1,11 +1,11 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import { LoginForm } from '../Login/LoginForm';
-import { LoginCreate } from '../Login/LoginCreate';
-import { LoginPasswordLost } from '../Login/LoginPasswordLost';
-import { LoginPasswordReset } from '../Login/LoginPasswordReset';
+import { Routes, Route } from 'react-router-dom';
+import LoginForm from './LoginForm';
+import LoginCreate from './LoginForm';
+import LoginPasswordLost from './LoginPasswordLost';
+import LoginPasswordReset from './LoginPasswordReset';
 
-export const Login = () => {
+const Login = () => {
   return (
     <div>
       <Routes>
@@ -17,3 +17,5 @@ export const Login = () => {
     </div>
   );
 };
+
+export default Login;
