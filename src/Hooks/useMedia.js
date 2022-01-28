@@ -1,6 +1,6 @@
 import React from 'react';
 
-function useMedia(media) {
+const useMedia = (media) => {
   const [match, setMatch] = React.useState(null);
 
   React.useEffect(() => {
@@ -16,6 +16,6 @@ function useMedia(media) {
   }, [media]);
 
   return match;
-}
+};
 
 export default useMedia;

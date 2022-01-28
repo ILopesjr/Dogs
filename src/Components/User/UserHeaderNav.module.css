@@ -23,18 +23,18 @@
 .nav button:hover,
 .nav button:focus {
   background: white;
-  box-shadow: 0 0 0 3x #eee;
+  box-shadow: 0 0 0 3px #eee;
   border-color: #333;
   outline: none;
 }
 
-.nav a:global(.active) {
+.nav :global(a.active) {
   background: white;
   box-shadow: 0 0 0 3px #fea;
   border-color: #fb1;
 }
 
-.nav a:global(.active) svg > * {
+.nav :global(a.active) svg > * {
   fill: #fb1;
 }
 
@@ -57,6 +57,7 @@
   display: block;
   width: 1.2rem;
   height: 2px;
+  border-radius: 2px;
   background: currentColor;
   box-shadow: 0 6px currentColor, 0 -6px currentColor;
   transition: 0.2s;
@@ -86,7 +87,7 @@
   right: 0px;
   padding: 0 1rem;
   background: white;
-  box-shadow: 0 1px 2px rgba (0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   border-radius: 0.2rem;
   transform: translateX(-10px);
   opacity: 0;
