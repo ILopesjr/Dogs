@@ -25,7 +25,6 @@ const Feed = ({ user }) => {
 
     window.addEventListener('wheel', infiniteScroll);
     window.addEventListener('scroll', infiniteScroll);
-
     return () => {
       window.removeEventListener('wheel', infiniteScroll);
       window.removeEventListener('scroll', infiniteScroll);
@@ -39,13 +38,24 @@ const Feed = ({ user }) => {
       )}
       {pages.map((page) => (
         <FeedPhotos
-          user={user}
           key={page}
+          user={user}
           page={page}
           setModalPhoto={setModalPhoto}
           setInfinite={setInfinite}
         />
       ))}
+      {!infinite && !user && (
+        <p
+          style={{
+            textAlign: 'center',
+            padding: '2rem 0 4rem 0',
+            color: '#888',
+          }}
+        >
+          Não existem mais postagens.
+        </p>
+      )}
     </div>
   );
 };
