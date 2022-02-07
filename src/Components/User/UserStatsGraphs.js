@@ -5,6 +5,7 @@ import { VictoryPie, VictoryChart, VictoryBar } from 'victory';
 const UserStatsGraphs = ({ data }) => {
   const [graph, setGraph] = React.useState([]);
   const [total, setTotal] = React.useState(0);
+  console.log(data);
 
   React.useEffect(() => {
     const graphData = data.map((item) => {
@@ -14,7 +15,7 @@ const UserStatsGraphs = ({ data }) => {
       };
     });
     setTotal(
-      data.map(({ acessos }) => Number(acessos)).reduce((a, b) => a + b),
+      data.map(({ acessos }) => Number(acessos)).reduce((a, b) => a + b, 0),
     );
     setGraph(graphData);
   }, [data]);
